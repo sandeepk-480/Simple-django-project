@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+th, td{
+    text-align: center;
+}
 .header{
     font-size: 1.3em;
     text-align: center;
