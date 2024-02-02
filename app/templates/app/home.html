@@ -1,0 +1,58 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+{% endblock  %}
+
+{% block title %}Home{% endblock  %}
+
+{% block body %}
+
+    {% comment %} For messages {% endcomment %}
+<div class="message-js">
+    {% if messages %}
+        {% for message in messages %}
+            <span class="{{message.tags}}">{{message}}</span>
+        {% endfor %}
+    {% endif %}
+</div>
+
+    {% comment %} Main Content {% endcomment %}
+<div class="header">
+    <h2>Student Management-</h2>
+</div>
+
+<div class="cont">
+    <div class="container">
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>Sr.No.</th>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th>City</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tr>
+                <tbody>
+                    {% for i in stu %} 
+                        <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{i.name}}</td>
+                            <td>{{i.roll}}</td>
+                            <td>{{i.city}}</td>
+                            <td>{{i.date}}</td>
+                            <td class="buttonn">
+                                <a href='/delete/{{i.id}}' type="button" class="delete_btn" id="delete-js" >Delete</button>
+                                <a href='/update/{{i.id}}' type="button" class="update_btn">Update</button>
+                            </td>
+                        </tr> 
+                    {% endfor %}
+                </tbody>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock  %}

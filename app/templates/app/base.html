@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}">
+    {% block css %}{% endblock  %}
+    <title>{% block title %}{% endblock  %}</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/add/" >Add Student</a></li>
+        </ul>
+    </div>
+
+    <!--  Main Content -->
+
+
+    {% block body %}{% endblock  %}
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <span>Copyright @2024-2028</span>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            let dashboard = document.querySelector('.message-js');
+            if (dashboard) {
+                dashboard.style.display = 'none';
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

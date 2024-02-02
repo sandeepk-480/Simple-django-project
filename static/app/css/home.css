@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+.header{
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.success{
+    display: flex;
+    font-size: 1em;
+    justify-content: center;
+    margin-bottom: 1.2em;
+    padding: 0.5em;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.table{
+    border: 1px solid #dee2e6;
+    flex: 1;
+}
+.table td{
+    border: 1px solid #dee2e6;
+    word-break: break-word;
+}
+.buttonn{
+    display: flex;
+    justify-content: space-around;
+}
+
+.delete_btn{
+    padding: 0.4em 0.8em;
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0.3em;
+    text-decoration: none;
+}
+.update_btn{
+    padding: 0.4em 0.8em;
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+    border-radius: 0.3em;
+    text-decoration: none;
+}
+.delete_btn:hover{
+    background-color: #bb3946;
+}
+.update_btn:hover{
+    background-color: #287639;
+}
+
+tr:nth-child(even){
+    background-color: #D6EEEE;
+}
+tbody:nth-child(odd){
+    background-color: whitesmoke;
+}
+th:last-child{
+    width: 12em;
+}
+.table{
+    min-width: 0;
+}
+
+@media only screen and (max-width: 770px) {
+    .buttonn{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .update_btn{
+        margin-top: 0.3em;
+    }
+    .delete_btn, update_btn{
+        width: 100%;
+    }
+    th:last-child{
+    width: 20%;
+    }
+}
+
+
+.cont {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+  }
+  
+  @media (min-width: 576px) {
+    .cont {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .cont {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .cont {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .cont {
+      max-width: 1140px;
+    }
+  }
+  

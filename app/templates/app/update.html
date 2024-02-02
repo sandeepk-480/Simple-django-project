@@ -1,0 +1,46 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/css/update.css' %}">
+{% endblock  %}
+
+{% block body %}
+
+    {% comment %} For messages {% endcomment %}
+    <div class="message-js">
+        {% if messages %}
+            {% for message in messages %}
+                <span class="{{message.tags}}">{{message}}</span>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="header">Update the given details</div>
+
+    {% comment %} For non field errors and form errors {% endcomment %}
+    <div class="errors">
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                {{error}}
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    {% comment %} Main Content {% endcomment %}
+    <div class="flex">
+        <div class="signup_form">
+            <form action="/update/{{pk}}/" method="post">
+                {% csrf_token %}
+                <div class="form-css">
+                    {% for i in form %}
+                        {{i.label_tag}} {{i}} <span class="errors">{{i.errors|striptags}}</span>
+                    {% endfor %}
+                </div>
+                <div class="buttonn">
+                    <button class="add-btn" type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock  %}
