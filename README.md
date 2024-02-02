@@ -1,6 +1,6 @@
 <h3>Simple Django Project</h3>
 <br>
-It project consist of Simple Student Management App- <br>
+The project consist of Simple Student Management App- <br>
 - It consist of a Homepage, Add Student, Update and delete functionality. <br>
 - Homepage consist of a table were all student's data are shown, data are fetched from Database. <br>
 - The table shows student- name, roll, date added, and delete and update buttons. <br>
