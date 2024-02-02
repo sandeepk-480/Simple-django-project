@@ -1,9 +1,10 @@
 <h3>Simple Django Project</h3>
 <br>
 It project consist of Simple Student Management App- <br>
-- It consist of a homepage were it shows all the student data stored in the database. <br>
-- There are 2 seperate Forms for adding and updating the Studnt data. <br>
-- Data is shown in the form of a table with 2 action buttons i.e. update and delete. <br> <br>
+- It consist of a Homepage, Add Student, Update and delete functionality. <br>
+- Homepage consist of a table were all student's data are shown, data are fetched from Database. <br>
+- The table shows student- name, roll, date added, and delete and update buttons. <br>
+- It consist of 2 seperate forms for adding and updating the student data. <br>
 
 
 <h3>How to Use it?</h3>
